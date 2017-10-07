@@ -1,0 +1,16 @@
+.senator-columns {
+    display: flex;
+    justify-content: center;
+}
+
+.senator-republicans {
+    width: 45%;
+    border: 1px solid red
+
+
+}
+
+.senator-democrats {
+    width: 45%;
+    border: 1px solid blue;
+}
