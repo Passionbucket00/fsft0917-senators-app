@@ -7,8 +7,10 @@ export default class Senator extends Component {
         const senator = this.props.senator;
 
         return (
-            <div>
-                {senator.name} {senator.description}
+            <div className="senator">
+                <h4>{senator.person.firstname} {senator.person.lastname}</h4> 
+                <div>{senator.party}</div>
+                <div>{senator.startdate}</div>
             </div>
         )
     }

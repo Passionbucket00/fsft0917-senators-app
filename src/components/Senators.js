@@ -17,9 +17,16 @@ export default class Senators extends Component {
             });
         }
 
+        renderDemocrats() {
+            return this.filterByParty('Democrat').map(senator => {
+                return <Senator  senator={senator}/>
+            });
+        }
+
     render() {
 
         const republicans = this.renderRepublicans();
+        const democrats = this.renderDemocrats();
         return (
             <div>
                 <form>
@@ -28,13 +35,11 @@ export default class Senators extends Component {
                 <div className="senator-columns">
                     <div className="senator-republicans">
                         <h1>Republicans</h1>
-                            <div>{republicans}
-                            </div>
+                            <div className="senators">{republicans}</div>
                     </div>
                     <div className="senator-democrats">
                         <h1>Democrats</h1>
-                            <div>
-                            </div>
+                            <div className="senators">{democrats}</div>
                     </div>
 
                     </div>
